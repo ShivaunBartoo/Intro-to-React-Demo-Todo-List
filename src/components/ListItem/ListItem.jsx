@@ -11,6 +11,7 @@ import "./ListItem.css";
 
 // Props are a lot like function arguments. When we use the ListItem component
 // we can pass it attributes that become properties on the props object here. 
+// eg: <ListItem id="123" handleDelete={someFunction}/>
 export default function ListItem({ id, handleDelete }) {
 
     // Local checked state controls the visual "done" state for this row only.
@@ -43,8 +44,7 @@ export default function ListItem({ id, handleDelete }) {
                 placeholder="What do you want to do today?"
             />
 
-            {/* Delete button: call the parent's handler with this item's id.
-                This keeps the delete logic in the parent (single source of truth). */}
+            {/* Delete button: call the parent's handler with this item's id.*/}
             <button onClick={() => handleDelete(id)} className="DeleteButton material-icons">
                 close
             </button>
