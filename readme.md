@@ -33,12 +33,11 @@ DemoTodoList/
                 ListItem.jsx — component representing a single row of the todo list
                 ListItem.css — styles for the ListItem
 ```
-```
 
 ## Run the demo
 1. Install deps:
-   npm install
+   `npm install`
 2. Start dev server:
-   npm run dev
+   `npm run dev`
 3. Open the URL Vite prints (usually http://localhost:5173)
 
