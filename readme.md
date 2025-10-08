@@ -24,21 +24,18 @@ DemoTodoList/
         App.jsx         — top-level page; renders TodoList
         App.css         — global layout styles
         components/     — UI pieces
-        components/     — UI pieces
             TodoList/
                 TodoList.jsx — parent component: renders todo list and manages list state.
                 TodoList.css — styles for TodoList
             ListItem/
                 ListItem.jsx — component representing a single row of the todo list
-                ListItem.jsx — component representing a single row of the todo list
                 ListItem.css — styles for the ListItem
-```
 ```
 
 ## Run the demo
 1. Install deps:
-   npm install
+   `npm install`
 2. Start dev server:
-   npm run dev
+   `npm run dev`
 3. Open the URL Vite prints (usually http://localhost:5173)
 
