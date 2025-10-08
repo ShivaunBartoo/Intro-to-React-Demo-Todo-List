@@ -15,8 +15,9 @@
 .ListItemBody
 {
     width: 90%;
-    height: 90%;
+    height: 100%;
     border: none;
+    background: none;
 }
 
 .ListItemBody:focus
