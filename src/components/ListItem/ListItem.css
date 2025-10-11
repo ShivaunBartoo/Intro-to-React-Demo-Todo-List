@@ -11,6 +11,21 @@
     gap: 5px;
     padding-left: 5px;
     background-color: white;
+    animation: listItemFadeIn 0.5s ease-out;
+}
+
+@keyframes listItemFadeIn 
+{
+  from 
+  {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to 
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ListItemBody
@@ -41,4 +56,15 @@
 .DeleteButton:hover
 {
     color: darkgray;
+}
+
+.ListItem:last-child .DeleteButton
+{
+    visibility: hidden;
+}
+
+.ListItem:has(.ListItemBody:placeholder-shown) .ListItemCheckbox
+{
+   opacity: 10%;
+   pointer-events: none;
 }

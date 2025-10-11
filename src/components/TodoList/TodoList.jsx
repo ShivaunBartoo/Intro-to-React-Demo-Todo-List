@@ -29,13 +29,17 @@ export default function TodoList() {
   //This function adds a new ListItem to our TodoList. 
   //It works by adding a new uid to our state, representing a new ListItem.
   //When we call listItems.map below, React creates a <ListItem> for each uid.
-  const handleAdd = () => 
+  const handleChange = (id) => 
   {
-    //You might be wondering why we dont just listitems.push. In React, we should treat state as immutable.
-    //We always create a new copy of the state with the changes we want, and setState to that new copy.
-    //This is because React uses state changes to know when to re-render components. 
-    //If we mutate state directly, React will not detect the change, and our UI will go out of sync with our data.
-    setListItems(prev => [...prev, getUid()]);
+    //only add a new list item if the current last item is changed.
+    if(listItems[listItems.length - 1] == id)
+    {
+      //You might be wondering why we dont just listitems.push. In React, we should treat state as immutable.
+      //We always create a new copy of the state with the changes we want, and setState to that new copy.
+      //This is because React uses state changes to know when to re-render components. 
+      //If we mutate state directly, React will not detect the change, and our UI will go out of sync with our data.
+      setListItems(prev => [...prev, getUid()]);
+    }
   }
 
   //Every React component must return some JSX to render.
@@ -50,9 +54,9 @@ export default function TodoList() {
             key={key}
             id={key}                 
             handleDelete={handleDelete}
+            handleChange={handleChange}
           />
         )}
-        <button className={"AddButton material-icons"} onClick={handleAdd}>add</button>
       </div>
     </div>
   )

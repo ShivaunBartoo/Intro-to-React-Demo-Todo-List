@@ -12,7 +12,7 @@ import "./ListItem.css";
 // Props are a lot like function arguments. When we use the ListItem component
 // we can pass it attributes that become properties on the props object here. 
 // eg: <ListItem id="123" handleDelete={someFunction}/>
-export default function ListItem({ id, handleDelete }) {
+export default function ListItem({ id, handleDelete, handleChange }) {
 
     // Local checked state controls the visual "done" state for this row only.
     // If we wanted to do anything with this state besides changing the component's style,
@@ -27,6 +27,7 @@ export default function ListItem({ id, handleDelete }) {
     return (
         <div className={`ListItem ${checked ? "Checked" : ""}`}>
             <input
+            className="ListItemCheckbox"
                 type="checkbox"
                 checked={checked}
                 onChange={onCheckboxChange}
@@ -42,6 +43,7 @@ export default function ListItem({ id, handleDelete }) {
                 className="ListItemBody"
                 type="text"
                 placeholder="What do you want to do today?"
+                onChange={() => handleChange(id)}
             />
 
             {/* Delete button: call the parent's handler with this item's id.*/}

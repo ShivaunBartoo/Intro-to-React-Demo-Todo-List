@@ -28,19 +28,3 @@
     gap: 6px;
     margin-top: 20px;
 }
-
-.AddButton
-{
-    margin-top: 5px;
-    width: 80px;
-    background-color: white;
-    color: darkgray;
-    border: 1px solid lightgray;
-    border-radius: 12px;
-}
-
-.AddButton:hover
-{
-    color: black;
-    border-color: lightgray;
-}
