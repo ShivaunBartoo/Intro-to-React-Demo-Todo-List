@@ -8,7 +8,7 @@ It demonstrates foundational React concepts like component composition, state, a
 
 You can see the final product [here](https://shivaunbartoo.github.io/Intro-to-React-Demo-Todo-List/)
 
-<img width="451" height="259" alt="Screenshot of Todo App" src="https://github.com/user-attachments/assets/cf28ceb2-b085-453f-892b-6631684d3ef7" />
+<img width="469" height="283" alt="Screenshot at Oct 10 18-22-15" src="https://github.com/user-attachments/assets/03052d85-2aee-4b18-8bf0-3775b9c3726f" />
 
 ## Project structure
 
